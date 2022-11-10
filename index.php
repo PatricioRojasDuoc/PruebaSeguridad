@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,7 +9,6 @@
     <title>login</title>
 </head>
 <body>
-
     <form action="validar.php" method= "post">
         <h1>LOGIN</H1>
         <P> Usuario <input type="text" placeholder="Igrese su Usuario" name="usuario"> </p>
