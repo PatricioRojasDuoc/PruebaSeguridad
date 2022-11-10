@@ -10,7 +10,7 @@
     <form action="validar.php" method= "post">
     <h1>LOGIN</H1>
     <P> Usuario <input type="text" placeholder="Igrese su Usuario" name="usuario"></p>
-    <P> Contraseña <input type="password" placeholder="Igrese su Contraseña" name="contraseña"> </p>
+    <P> Contraseña <input type="password" placeholder="Ingrese su Contraseña" name="contraseña"> </p>
     <input type="submit" value="Ingresar">
     </form>
 </body>
