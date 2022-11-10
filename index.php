@@ -1,3 +1,13 @@
+<?php
+//seguridad inicio de sesiones vacio o null
+session_start();
+$varsesion=_SESSION['usuario'];
+if($varsesion== null || $varsesion=''){
+    echo "no tienes acceso";
+    die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
