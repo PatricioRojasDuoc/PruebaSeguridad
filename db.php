@@ -1,5 +1,5 @@
 <?php
-$conexion=mysqli_connect("localhost","root","","seguridad");
+$conexion=mysqli_connect("localhost","adminc","","seguridad");
 
 
 ?>
