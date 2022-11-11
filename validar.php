@@ -24,3 +24,13 @@ if($filas){
 
 mysqli_free_result($resultado);
 mysqli_close($conexion);
+
+<?php
+//seguridad inicio de sesiones vacio o null
+session_start();
+$varsesion=$_SESSION['usuario'];
+if($varsesion== null || $varsesion=''){
+    echo "no tienes acceso";
+    die();
+}
+?>
