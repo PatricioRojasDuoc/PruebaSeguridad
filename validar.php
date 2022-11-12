@@ -7,15 +7,15 @@ $_SESSION['usuario']=$usuario;
 
 $conexion=mysqli_connect("localhost","root","","seguridad");
 
-$consulta="SELECT usuario, contraseña,tipo  FROM usuarios 
-where usuario='$usuario' and contraseña='$contraseña' and tipo='$tipo'";
+$consulta="SELECT usuario, contraseña  FROM usuarios 
+where usuario='$usuario' and contraseña='$contraseña'";
 
 $resultado=mysqli_query($conexion,$consulta);
 
 $filas=mysqli_num_rows($resultado);
 
 if($filas){
-    if (isset($_SESSION['$usuario'] and $_SESSION['$tipo']) == true){
+    if (isset($_SESSION['$usuario']){
     header("location:home.php");
     }else{
         ?>
