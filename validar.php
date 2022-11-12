@@ -9,7 +9,7 @@ $conexion=mysql_conect("localhost","root","","seguridad");
 $consulta="SELECT usuario, contraseña FROM usuarios where usuario='$usuario' and contraseña='$contraseña'";
 $resultado=mysqli_query($conexion,$consulta);
 
-$filas=mysqli_num_rows($resultados);
+$filas=mysqli_num_rows($resultado);
 
 if($filas){
     header("location:home.php");
@@ -24,4 +24,3 @@ if($filas){
 
 mysqli_free_result($resultado);
 mysqli_close($conexion);
-?>

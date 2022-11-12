@@ -1,5 +1,5 @@
 <?php
-$conexion=mysql_conect("localhost","asdminc","Asdf12345","login");
+$conexion=mysqli_connect("localhost","root","","PRUEBASEGURIDAD");
 
 
 ?>
