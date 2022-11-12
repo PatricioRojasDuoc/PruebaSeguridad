@@ -1,18 +1,19 @@
 <?php
 $usuario=$_POST['usuario'];
 $contraseña=$_POST['contraseña'];
+$tipo=$_POST['tipo']
 session_start();
 $_SESSION['usuario']=$usuario;
 
 $conexion=mysqli_connect("localhost","root","","seguridad");
 
-$consulta="SELECT usuario, contraseña  FROM usuarios where usuario='$usuario' and contraseña='$contraseña'";
+$consulta="SELECT usuario, contraseña,tipo  FROM usuarios where usuario='$usuario' and contraseña='$contraseña'";
 $resultado=mysqli_query($conexion,$consulta);
 
 $filas=mysqli_num_rows($resultado);
 
 if($filas){
-    if (isset($_SESSION['adminc']) == true){
+    if (isset($_SESSION['adminb'] && $_SESSION['admin']) == true){
     header("location:home.php");
     }
 }else{
