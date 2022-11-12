@@ -4,7 +4,7 @@ $contraseña=$_POST['contraseña'];
 session_start();
 $_SESSION['usuario']=$usuario;
 
-$conexion=mysqli_connect("EC2AMAZ-1FMELI5","Administrator","bTD.hCT8sM?e)e=eRt;9HprJD)Ln9LsD","seguridad");
+$conexion=mysqli_connect("EC2AMAZ-1FMELI5","Administrator","","seguridad");
 
 $consulta="SELECT usuario, contraseña  FROM usuarios 
 where usuario='$usuario' and contraseña='$contraseña'";
