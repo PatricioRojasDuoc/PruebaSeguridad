@@ -4,9 +4,9 @@ $contraseña=$_POST['contraseña'];
 session_start();
 $_SESSION['usuario']=$usuario;
 
-$conexion=mysqli_conect("localhost","root","","seguridad");
+$conexion=mysqli_connect("localhost","root","","pruebaseguridad");
 
-$consulta="SELECT usuario, contraseña FROM usuarios where usuario='$usuario' and contraseña='$contraseña'";
+$consulta="SELECT * FROM usuarios where usuario='$usuario' and contraseña='$contraseña'";
 $resultado=mysqli_query($conexion,$consulta);
 
 $filas=mysqli_num_rows($resultado);
@@ -18,7 +18,7 @@ if($filas){
     <?php
     include("index.php");
     ?>
-    <h1 class="bad">Error en la Autenticacion</h1>
+    <h1>Error en la Autenticacion</h1>
     <?php
 }
 
