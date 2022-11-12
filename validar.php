@@ -12,7 +12,9 @@ $resultado=mysqli_query($conexion,$consulta);
 $filas=mysqli_num_rows($resultado);
 
 if($filas){
+    if (isset($_SESSION['loggedin']) == true){
     header("location:home.php");
+    }
 }else{
     ?>
     <?php
