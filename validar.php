@@ -5,7 +5,7 @@ $tipo=$_POST['tipo'];
 session_start();
 $_SESSION['usuario']=$usuario;
 
-$conexion=mysqli_connect("localhost","root","","seguridad");
+$conexion=mysqli_connect("EC2AMAZ-1FMELI5","Administrator","bTD.hCT8sM?e)e=eRt;9HprJD)Ln9LsD","seguridad");
 
 $consulta="SELECT usuario, contraseña  FROM usuarios 
 where usuario='$usuario' and contraseña='$contraseña'";
@@ -15,7 +15,7 @@ $resultado=mysqli_query($conexion,$consulta);
 $filas=mysqli_num_rows($resultado);
 
 if($filas){
-    if (isset($_SESSION['$usuario']){
+    if (isset($_SESSION['$usuario'])){
     header("location:home.php");
     }else{
         ?>
