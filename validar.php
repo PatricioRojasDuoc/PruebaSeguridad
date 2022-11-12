@@ -15,7 +15,7 @@ $resultado=mysqli_query($conexion,$consulta);
 $filas=mysqli_num_rows($resultado);
 
 if($filas){
-    if (isset($_SESSION['$usuario'] && $_SESSION['$tipo']) == true){
+    if (isset($_SESSION['$usuario'] and $_SESSION['$tipo']) == true){
     header("location:home.php");
     }else{
         ?>
