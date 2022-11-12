@@ -17,6 +17,13 @@ $filas=mysqli_num_rows($resultado);
 if($filas){
     if (isset($_SESSION['$usuario'] && $_SESSION['$tipo']) == true){
     header("location:home.php");
+    }else{
+        ?>
+        <?php
+        include("index.php");
+        ?>
+        <h1>Error en la Autenticacion2</h1>
+        <?php
     }
 }else{
     ?>
